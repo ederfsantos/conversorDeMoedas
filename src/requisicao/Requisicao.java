@@ -5,9 +5,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class Conversao {
+public class Requisicao {
 
-    public String getConversao(String moedaOrigem, String moedaDestino, Double valor) {
+    public String getRequisicao(String moedaOrigem, String moedaDestino, Double valor) {
         String chave = "d3fd3f8c8ec82300ac9b19c6";
         String urlBase = "https://v6.exchangerate-api.com/v6/d3fd3f8c8ec82300ac9b19c6/pair/USD/BRL/100";
         String url = "https://v6.exchangerate-api.com/v6/" + chave + "/pair/" + moedaOrigem + "/" + moedaDestino + "/" + valor;
