@@ -40,13 +40,7 @@ public class ConversaoDeValores {
         moeda = gson.fromJson(respostaJson, MoedaRecord.class);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-        //dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
+        apresentarObjeto();
     }
 
     public void convertePesoArgentinoParaDolar(Double valor) {
@@ -55,14 +49,7 @@ public class ConversaoDeValores {
         System.out.println(moeda);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-//dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
-
+        apresentarObjeto();
     }
 
     public void converteDolarParaRealBrasileiro(Double valor) {
@@ -71,13 +58,7 @@ public class ConversaoDeValores {
         System.out.println(moeda);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-//dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
+        apresentarObjeto();
 
     }
 
@@ -87,13 +68,7 @@ public class ConversaoDeValores {
         System.out.println(moeda);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-//dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
+        apresentarObjeto();
 
     }
 
@@ -103,14 +78,7 @@ public class ConversaoDeValores {
         System.out.println(moeda);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-//dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
-
+        apresentarObjeto();
     }
 
     public void convertePesoColombianoParaDolar(Double valor) {
@@ -119,13 +87,7 @@ public class ConversaoDeValores {
         System.out.println(moeda);
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
-//dados do objeto
-        System.out.println("\nDados do objeto resumido:\n" + moeda);
-        resposta = gson.fromJson(respostaJson, RespostaRecord.class);
-        System.out.println("\nObjeto desserializado:\n" + resposta);
-
-        String json = gson.toJson(resposta);
-        System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
+        apresentarObjeto();
 
     }
 
@@ -137,7 +99,10 @@ public class ConversaoDeValores {
         System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
                            "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
 
-        //dados do objeto
+        apresentarObjeto();
+    }
+
+    public void apresentarObjeto() {
         System.out.println("\nDados do objeto resumido:\n" + moeda);
         resposta = gson.fromJson(respostaJson, RespostaRecord.class);
         System.out.println("\nObjeto desserializado:\n" + resposta);
