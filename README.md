@@ -1,6 +1,6 @@
 # Conversor de Moedas
 
-![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-orange)
+<img aLign="center" alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white">
 
 ## Descrição
 O **Conversor de Moedas** permite a conversão dinâmica entre duas moedas escolhidas pelo usuário, utilizando uma API de câmbio para obter valores atualizados em tempo real, esse sistema faz parte do desafio do Challenge ONE - JAVA - Back end.
