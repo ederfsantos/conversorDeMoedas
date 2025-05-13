@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
         int opcao;
+        Double valor = null;
+        Double valorConvertido = null;
+        ConversaoDeValores converte = new ConversaoDeValores();
 
         Scanner ler = new Scanner(System.in);
         System.out.println("*********************************************************************");
@@ -19,11 +22,18 @@ public class Principal {
             opcao = ler.nextInt();
             System.out.println("*********************************************************************");
 
-            switch (opcao){
+            switch (opcao) {
+                /**
+                 * USD - DOLAR AMERICANO
+                 * BRL - REAL BRASILEIRO
+                 * ARS - PESO ARGENTINO
+                 * COP - PESO COLOMBIANO
+                 */
 
-
-                case 1:
-                {
+                case 1: {
+                    valor = converte.lerValor();
+                    converte.converteDolarParaPesoArgentino(valor);
+                    break;
 
                 }
             }
@@ -34,3 +44,9 @@ public class Principal {
 
     }
 }
+
+
+
+
+
+
