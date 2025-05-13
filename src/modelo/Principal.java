@@ -16,7 +16,8 @@ public class Principal {
             System.out.println("1 - Dólar para Peso Argentino\n2 - Peso Argentino para Dólar\n" +
                                "3 - Dólar para Real Brasileiro\n4 - Real Brasileiro para Dólar\n" +
                                "5 - Dólar para Peso Colombiano\n6 - Peso Colombiano para Dólar\n" +
-                               "7 - Dólar para Guarani Paraguaio\n8 - Sair da aplicação");
+                               "7 - Dólar para Guarani Paraguaio\n8 - Real Brasileiro para Euro\n" +
+                               "9 - Sair da aplicação");
             System.out.println("Escolha uma opção válida:");
             opcao = ler.nextInt();
             System.out.println("*********************************************************************");
@@ -28,6 +29,7 @@ public class Principal {
                  * ARS - PESO ARGENTINO
                  * COP - PESO COLOMBIANO
                  * PYG - GUARANI PARAGUAIO
+                 * EUR - EURO UNIÃO EUROPÉIA
                  */
 
                 case 1: {
@@ -67,8 +69,12 @@ public class Principal {
                     break;
                 }
 
-                case 8:
-                {
+                case 8: {
+                    valor = converte.lerValor();
+                    converte.converteRealParaEuro(valor);
+                    break;
+                }
+                case 9: {
                     System.out.println("Saindo da aplicação!\nAté a próxima!");
                     break;
                 }
@@ -78,7 +84,7 @@ public class Principal {
             }
 
 
-        } while (opcao != 8 );
+        } while (opcao != 9);
 
 
     }

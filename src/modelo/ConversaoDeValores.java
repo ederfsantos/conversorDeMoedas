@@ -21,6 +21,7 @@ public class ConversaoDeValores {
     String pesoArgentino = "ARS";
     String pesoColombiano = "COP";
     String guaraniParaguaio = "PYG";
+    String euro = "EUR";
     String respostaJson = "";
     Scanner ler = new Scanner(System.in);
     Requisicao converter = new Requisicao();
@@ -102,5 +103,14 @@ public class ConversaoDeValores {
 
         String json = gson.toJson(resposta);
         System.out.println("\n***Dados completos no formato Json apartir do objeto***\n" + json + "\n");
+    }
+
+    public void converteRealParaEuro(Double valor) {
+        respostaJson = converter.getRequisicao(real, euro, valor);
+        moeda = gson.fromJson(respostaJson, MoedaRecord.class);
+        System.out.println("O valor de $" + String.format("%.2f", valor) + "[" + moeda.base_code() + "] " +
+                           "corresponde ao valor de $" + String.format("%.2f", moeda.conversion_result()) + "[" + moeda.target_code() + "]\n");
+        apresentarObjeto();
+
     }
 }
