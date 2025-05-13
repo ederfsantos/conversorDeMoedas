@@ -1,13 +1,26 @@
 package modelo;
 
 import java.util.Scanner;
+/**
+ * USD - DOLAR AMERICANO
+ * BRL - REAL BRASILEIRO
+ * ARS - PESO ARGENTINO
+ * COP - PESO COLOMBIANO
+ * PYG - GUARANI PARAGUAIO
+ * EUR - EURO UNIÃO EUROPÉIA
+ */
 
 public class Principal {
     public static void main(String[] args) {
         int opcao;
         Double valor;
+        String dolar = "USD";
+        String real = "BRL";
+        String pesoArgentino = "ARS";
+        String pesoColombiano = "COP";
+        String guaraniParaguaio = "PYG";
+        String euro = "EUR";
         ConversaoDeValores converte = new ConversaoDeValores();
-
         Scanner ler = new Scanner(System.in);
         System.out.println("*********************************************************************");
         System.out.println("Seja bem-vindo(a) ao Conversor de Moedas!\n");
@@ -23,55 +36,48 @@ public class Principal {
             System.out.println("*********************************************************************");
 
             switch (opcao) {
-                /**
-                 * USD - DOLAR AMERICANO
-                 * BRL - REAL BRASILEIRO
-                 * ARS - PESO ARGENTINO
-                 * COP - PESO COLOMBIANO
-                 * PYG - GUARANI PARAGUAIO
-                 * EUR - EURO UNIÃO EUROPÉIA
-                 */
+
 
                 case 1: {
                     valor = converte.lerValor();
-                    converte.converteDolarParaPesoArgentino(valor);
+                    converte.realizarConversao(dolar,pesoArgentino,valor);
                     break;
 
                 }
                 case 2: {
                     valor = converte.lerValor();
-                    converte.convertePesoArgentinoParaDolar(valor);
+                    converte.realizarConversao(pesoArgentino,dolar,valor);
                     break;
                 }
                 case 3: {
                     valor = converte.lerValor();
-                    converte.converteDolarParaRealBrasileiro(valor);
+                    converte.realizarConversao(dolar,real,valor);
                     break;
                 }
                 case 4: {
                     valor = converte.lerValor();
-                    converte.converteRealBrasileiroParaDolar(valor);
+                    converte.realizarConversao(real,dolar,valor);
                     break;
                 }
                 case 5: {
                     valor = converte.lerValor();
-                    converte.converteDolarParaPesoColombiano(valor);
+                    converte.realizarConversao(dolar,pesoColombiano,valor);
                     break;
                 }
                 case 6: {
                     valor = converte.lerValor();
-                    converte.convertePesoColombianoParaDolar(valor);
+                    converte.realizarConversao(pesoColombiano,dolar,valor);
                     break;
                 }
                 case 7: {
                     valor = converte.lerValor();
-                    converte.converteDolarParaGuaraniParaguaio(valor);
+                    converte.realizarConversao(dolar,guaraniParaguaio,valor);
                     break;
                 }
 
                 case 8: {
                     valor = converte.lerValor();
-                    converte.converteRealParaEuro(valor);
+                    converte.realizarConversao(real,euro,valor);
                     break;
                 }
                 case 9: {
